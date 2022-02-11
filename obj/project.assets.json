@@ -1172,9 +1172,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\wazer\\source\\repos\\WinFormsAppSQLITE\\WinFormsAppSQLITE.csproj",
-      "projectName": "WinFormsAppSQLITE",
-      "projectPath": "C:\\Users\\wazer\\source\\repos\\WinFormsAppSQLITE\\WinFormsAppSQLITE.csproj",
+      "projectUniqueName": "C:\\Users\\wazer\\source\\repos\\WinFormsAppSQLITE\\Todolist_SQLITE.csproj",
+      "projectName": "Todolist_SQLITE",
+      "projectPath": "C:\\Users\\wazer\\source\\repos\\WinFormsAppSQLITE\\Todolist_SQLITE.csproj",
       "packagesPath": "C:\\Users\\wazer\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\wazer\\source\\repos\\WinFormsAppSQLITE\\obj\\",
       "projectStyle": "PackageReference",

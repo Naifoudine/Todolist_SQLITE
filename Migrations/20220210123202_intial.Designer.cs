@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using WinFormsAppSQLITE.Models;
+using Todolist_SQLITE.Models;
 
 #nullable disable
 
-namespace WinFormsAppSQLITE.Migrations
+namespace Todolist_SQLITE.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20220210123202_intial")]

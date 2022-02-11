@@ -1,4 +1,4 @@
-﻿namespace WinFormsAppSQLITE
+﻿namespace Todolist_SQLITE
 {
     partial class FrmTodo
     {

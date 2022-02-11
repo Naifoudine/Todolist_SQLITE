@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace WinFormsAppSQLITE.Migrations
+namespace Todolist_SQLITE.Migrations
 {
     public partial class intial : Migration
     {

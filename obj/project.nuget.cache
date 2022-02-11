@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Yt+E6hsCvVD9cIol1MF4Xy89IMwY/Ju5kf7DJxzKciBUdiQVN8u/UwCTBGuV4wyNVPacZ/lDbBBnADqqMmw7rg==",
+  "dgSpecHash": "/0C1sTXG1H1kdgs0ghOfAfQT9vPS1p8nJPt9f/SySoKiA6uYZ2W9SAeo/l6DDmUEtoWBeOI5HDBg8QuaDaDz2g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\wazer\\source\\repos\\WinFormsAppSQLITE\\WinFormsAppSQLITE.csproj",
+  "projectFilePath": "C:\\Users\\wazer\\source\\repos\\WinFormsAppSQLITE\\Todolist_SQLITE.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\wazer\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\wazer\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.2\\microsoft.data.sqlite.core.6.0.2.nupkg.sha512",

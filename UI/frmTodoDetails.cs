@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WinFormsAppSQLITE.Models;
+using Todolist_SQLITE.Models;
 
-namespace WinFormsAppSQLITE.UI
+namespace Todolist_SQLITE.UI
 {
     public partial class frmTodoDetails : Form
     {

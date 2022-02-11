@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WinFormsAppSQLITE.Models
+namespace Todolist_SQLITE.Models
 {
     public class Todo
     {

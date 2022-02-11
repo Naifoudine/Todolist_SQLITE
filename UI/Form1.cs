@@ -7,10 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WinFormsAppSQLITE.Models;
-using WinFormsAppSQLITE.UI;
+using Todolist_SQLITE.Models;
+using Todolist_SQLITE.UI;
 
-namespace WinFormsAppSQLITE
+namespace Todolist_SQLITE
 {
     public partial class FrmTodo : Form
     {
