@@ -85,7 +85,7 @@ namespace Todolist_SQLITE
             TodoDataGridView.Rows.Clear();
             foreach (var todo in todos)
             {
-                TodoDataGridView.Rows.Add(todo.Id, todo.Task, todo.Date, todo.Description);
+                TodoDataGridView.Rows.Add(todo.Id, todo.Status, todo.Task, todo.Date, todo.Description);
             }
         }
 
@@ -95,10 +95,10 @@ namespace Todolist_SQLITE
             {
                 DataGridViewRow dr = TodoDataGridView.SelectedRows[0];
                 frmTodoDetails frm = new frmTodoDetails(this);
-                frm.lbl_id_todo.Text = dr.Cells[0].Value.ToString();
-                frm.details_txtBoxTask.Text = dr.Cells[1].Value.ToString();
-                frm.details_dateTimePicker2.Text = dr.Cells[2].Value.ToString();
-                frm.details_textBoxDesc.Text = dr.Cells[3].Value.ToString();
+                frm.lbl_id_todo.Text = dr.Cells[1].Value.ToString();
+                frm.details_txtBoxTask.Text = dr.Cells[2].Value.ToString();
+                frm.details_dateTimePicker2.Text = dr.Cells[3].Value.ToString();
+                frm.details_textBoxDesc.Text = dr.Cells[4].Value.ToString();
 
                 frm.ShowDialog();
             }
@@ -121,7 +121,8 @@ namespace Todolist_SQLITE
                     if (isDelete)
                     {
                         MessageBox.Show("Tâche supprimée avec succès !", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        LoadData();
+                        TodoDataGridView.Rows.Remove(dr);
+
                     }
                     else
                     {
@@ -134,6 +135,26 @@ namespace Todolist_SQLITE
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void valider_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow dr in TodoDataGridView.Rows)
+            {
+                bool isChecked = Convert.ToBoolean(dr.Cells["Etat"].Value);
+                if (isChecked)
+                {
+                    Todo todo = new Todo();
+                    todo.Id = (int)dr.Cells["ID"].Value;
+                    todo.Task = (string)dr.Cells["Task"].Value;
+                    todo.Date = (DateTime)dr.Cells["Echeance"].Value;
+                    todo.Description = (string)dr.Cells["Desc"].Value;
+                    todo.Status = 1;
+                    _dbContext.Update(todo);
+                    //MessageBox.Show("ID : " + todo.Id + " ajouté!");
+                }
+            }
+         LoadData();
         }
     }
 }

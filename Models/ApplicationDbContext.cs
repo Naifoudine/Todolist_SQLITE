@@ -11,7 +11,7 @@ namespace Todolist_SQLITE.Models
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite(@"Data Source= C:\Users\wazer\source\repos\WinFormsAppSQLITE\DB\DBTodolist.sql");
+            optionsBuilder.UseSqlite(@"Data Source= C:\Users\wazer\source\repos\Todolist_SQLITE\DB\DBTodolist.sql");
         }
 
         public DbSet<Todo> Todos { get; set; }
@@ -23,7 +23,7 @@ namespace Todolist_SQLITE.Models
 
         public bool Update(Todo todo)
         {
-            var data = Todos.FirstOrDefault();
+            var data = Todos.FirstOrDefault(task=>task.Id== todo.Id);
             if (data == null)
             {
                 return false;

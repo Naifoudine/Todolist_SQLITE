@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\wazer\\source\\repos\\WinFormsAppSQLITE\\Todolist_SQLITE.csproj": {}
+    "C:\\Users\\wazer\\source\\repos\\Todolist_SQLITE\\Todolist_SQLITE.csproj": {}
   },
   "projects": {
-    "C:\\Users\\wazer\\source\\repos\\WinFormsAppSQLITE\\Todolist_SQLITE.csproj": {
+    "C:\\Users\\wazer\\source\\repos\\Todolist_SQLITE\\Todolist_SQLITE.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wazer\\source\\repos\\WinFormsAppSQLITE\\Todolist_SQLITE.csproj",
+        "projectUniqueName": "C:\\Users\\wazer\\source\\repos\\Todolist_SQLITE\\Todolist_SQLITE.csproj",
         "projectName": "Todolist_SQLITE",
-        "projectPath": "C:\\Users\\wazer\\source\\repos\\WinFormsAppSQLITE\\Todolist_SQLITE.csproj",
+        "projectPath": "C:\\Users\\wazer\\source\\repos\\Todolist_SQLITE\\Todolist_SQLITE.csproj",
         "packagesPath": "C:\\Users\\wazer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wazer\\source\\repos\\WinFormsAppSQLITE\\obj\\",
+        "outputPath": "C:\\Users\\wazer\\source\\repos\\Todolist_SQLITE\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\wazer\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -30,12 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.valider = new System.Windows.Forms.Button();
             this.lblTAF = new System.Windows.Forms.Label();
             this.TodoDataGridView = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Etat = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Task = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Echeance = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Desc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.supprimerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -45,12 +49,10 @@
             this.lblTache = new System.Windows.Forms.Label();
             this.textBoxDesc = new System.Windows.Forms.TextBox();
             this.lblDesc = new System.Windows.Forms.Label();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.supprimerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TodoDataGridView)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -58,6 +60,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.valider);
             this.panel1.Controls.Add(this.lblTAF);
             this.panel1.Controls.Add(this.TodoDataGridView);
             this.panel1.Controls.Add(this.tableLayoutPanel1);
@@ -66,6 +69,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1244, 668);
             this.panel1.TabIndex = 0;
+            // 
+            // valider
+            // 
+            this.valider.Location = new System.Drawing.Point(1015, 342);
+            this.valider.Name = "valider";
+            this.valider.Size = new System.Drawing.Size(210, 29);
+            this.valider.TabIndex = 4;
+            this.valider.Text = "Valider les modifications";
+            this.valider.UseVisualStyleBackColor = true;
+            this.valider.Click += new System.EventHandler(this.valider_Click);
             // 
             // lblTAF
             // 
@@ -83,6 +96,7 @@
             this.TodoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TodoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
+            this.Etat,
             this.Task,
             this.Echeance,
             this.Desc});
@@ -93,7 +107,7 @@
             this.TodoDataGridView.RowHeadersWidth = 51;
             this.TodoDataGridView.RowTemplate.Height = 24;
             this.TodoDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.TodoDataGridView.Size = new System.Drawing.Size(1157, 329);
+            this.TodoDataGridView.Size = new System.Drawing.Size(984, 329);
             this.TodoDataGridView.TabIndex = 2;
             this.TodoDataGridView.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TodoDataGridView_RowHeaderMouseDoubleClick);
             // 
@@ -103,6 +117,12 @@
             this.ID.MinimumWidth = 6;
             this.ID.Name = "ID";
             this.ID.Visible = false;
+            // 
+            // Etat
+            // 
+            this.Etat.HeaderText = "Etat";
+            this.Etat.MinimumWidth = 6;
+            this.Etat.Name = "Etat";
             // 
             // Task
             // 
@@ -121,6 +141,21 @@
             this.Desc.HeaderText = "Description";
             this.Desc.MinimumWidth = 6;
             this.Desc.Name = "Desc";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.supprimerToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(148, 28);
+            // 
+            // supprimerToolStripMenuItem
+            // 
+            this.supprimerToolStripMenuItem.Name = "supprimerToolStripMenuItem";
+            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(147, 24);
+            this.supprimerToolStripMenuItem.Text = "Supprimer";
+            this.supprimerToolStripMenuItem.Click += new System.EventHandler(this.supprimerToolStripMenuItem_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -232,21 +267,6 @@
             this.lblDesc.TabIndex = 5;
             this.lblDesc.Text = "Description :";
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.supprimerToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 56);
-            // 
-            // supprimerToolStripMenuItem
-            // 
-            this.supprimerToolStripMenuItem.Name = "supprimerToolStripMenuItem";
-            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
-            this.supprimerToolStripMenuItem.Text = "Supprimer";
-            this.supprimerToolStripMenuItem.Click += new System.EventHandler(this.supprimerToolStripMenuItem_Click);
-            // 
             // FrmTodo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -262,9 +282,9 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TodoDataGridView)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -282,13 +302,15 @@
         private System.Windows.Forms.TextBox textBoxDesc;
         private System.Windows.Forms.Label lblTAF;
         private System.Windows.Forms.Button btnAdd;
+        public System.Windows.Forms.DataGridView TodoDataGridView;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem supprimerToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Task;
         private System.Windows.Forms.DataGridViewTextBoxColumn Echeance;
         private System.Windows.Forms.DataGridViewTextBoxColumn Desc;
-        public System.Windows.Forms.DataGridView TodoDataGridView;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem supprimerToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Etat;
+        private System.Windows.Forms.Button valider;
 
         //#endregion
     }
