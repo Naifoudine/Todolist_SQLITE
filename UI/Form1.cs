@@ -141,18 +141,24 @@ namespace Todolist_SQLITE
         {
             foreach (DataGridViewRow dr in TodoDataGridView.Rows)
             {
-                bool isChecked = Convert.ToBoolean(dr.Cells["Etat"].Value);
+                    bool isChecked = Convert.ToBoolean(dr.Cells["Etat"].Value);
+                    Todo todo = new Todo();
+                    todo.Id = Convert.ToInt32(dr.Cells["ID"].Value);
+                    todo.Task = Convert.ToString((string)dr.Cells["Task"].Value);
+                    todo.Date = Convert.ToDateTime(dr.Cells["Echeance"].Value);
+                    todo.Description = Convert.ToString((string)dr.Cells["Desc"].Value);
                 if (isChecked)
                 {
-                    Todo todo = new Todo();
-                    todo.Id = (int)dr.Cells["ID"].Value;
-                    todo.Task = (string)dr.Cells["Task"].Value;
-                    todo.Date = (DateTime)dr.Cells["Echeance"].Value;
-                    todo.Description = (string)dr.Cells["Desc"].Value;
                     todo.Status = 1;
                     _dbContext.Update(todo);
                     //MessageBox.Show("ID : " + todo.Id + " ajouté!");
                 }
+                else
+                {
+                    todo.Status = 0;
+                    _dbContext.Update(todo);
+                }
+
             }
          LoadData();
         }
